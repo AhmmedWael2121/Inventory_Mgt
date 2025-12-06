@@ -8,5 +8,8 @@ namespace Inventory.Domains.Entities.CategoryEntity
 {
     public class Category : BaseEntity
     {
+        public string CategoryCode { get; set; }
+        public string Name { get; set; } = null!;
+        public string? Description { get; set; }
     }
 }
