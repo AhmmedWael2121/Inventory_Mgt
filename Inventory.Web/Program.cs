@@ -1,4 +1,6 @@
 
+using Inventory.Persistence.Data.Context;
+
 namespace Inventory.Web
 {
     public class Program
@@ -13,6 +15,7 @@ namespace Inventory.Web
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddSqlServer<InventoryDbContext>(builder.Configuration.GetConnectionString("InventoryConn"));
 
             var app = builder.Build();
 
