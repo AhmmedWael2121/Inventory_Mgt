@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Inventory.Service.Abstractions\Inventory.Service.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>
