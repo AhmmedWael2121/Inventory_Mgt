@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 namespace Inventory.Domains.Contracts
 {
     public interface IProductRepository : IRepository<Product>
+
     {
         Task<Product?> GetByProductCodeAsync(string Code);
-        Task<IEnumerable<Product>> GetProductsByCategoryIdAsync(Guid categoryId);
+        Task<IEnumerable<Product>> GetProductsByCategoryIdAsync(string catCode);
     }
 }
