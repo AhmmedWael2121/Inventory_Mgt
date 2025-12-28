@@ -3,11 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Inventory.Domains.Entities.InventoryEntity
 {
-    public class InventoryTransaction : BaseEntity
+    public class InventoryTransaction : BaseEntity<Guid>
     {
         public string TransactionCode { get; set; } = null!;
         [ForeignKey(nameof(Product))]
         public Guid ProductId { get; set; }
+        public string? ProductCode{ get; set; }
         public Product? Product { get; set; }
         public int Quantity { get; set; }
         public TransactionType Type { get; set; }

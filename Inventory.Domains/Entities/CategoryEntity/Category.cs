@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inventory.Domains.Entities.CategoryEntity
 {
-    public class Category : BaseEntity
+    public class Category : BaseEntity<Guid>
     {
         public string CategoryCode { get; set; }
         public string Name { get; set; } = null!;

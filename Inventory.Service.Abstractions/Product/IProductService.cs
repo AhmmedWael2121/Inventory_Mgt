@@ -10,10 +10,10 @@ namespace Inventory.Service.Abstractions.Product
     public interface IProductService
     {
         Task<ProductDto> CreateAsync(CreateProductDto dto);
-        Task<ProductDto?> GetByIdAsync(Guid id);
+        Task<ProductDto?> GetByIdAsync(string?  ProductCode);
         Task<IEnumerable<ProductDto>> GetAllAsync();
-        Task<IEnumerable<ProductDto>> GetLowStockAsync(int threshold);
+        Task<IEnumerable<ProductDto>> GetProductsByCategoryIdAsync(string? catCode);
         Task UpdateAsync(ProductDto dto);
-        Task DeleteAsync(Guid id);
+        Task DeleteAsync(string Code);
     }
 }

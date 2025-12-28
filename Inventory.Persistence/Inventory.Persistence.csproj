@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.22">
@@ -17,6 +18,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Inventory.Domains\Inventory.Domains.csproj" />
+    <ProjectReference Include="..\Inventory.Shared\Inventory.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Store.Domain">
+      <HintPath>..\..\..\Route\Back-End\C#\WebAPI\Store\Store.Domain\obj\Debug\net8.0\ref\Store.Domain.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

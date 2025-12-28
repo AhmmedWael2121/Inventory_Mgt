@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inventory.Domains.Entities
+namespace Inventory.Domains.Exceptions.BadRequest
 {
-    public class BaseEntity<T>
+    public class InventoryBadRequestExp (string message) : BadRequestExp(message)
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
     }
 }
